@@ -15,6 +15,15 @@
 
 
 @implementation InterfaceController
+- (IBAction)push {
+    //[self pushControllerWithName:@"test3" context:nil];
+    //[self presentControllerWithName:@"test3" context:nil];
+    
+    // modal出一个类似于 广告轮播界面,每个界面都是一个IfController
+    
+    // push出来控制器是没有轮播效果的
+    [self presentControllerWithNames:@[@"test1", @"test2", @"test3"] contexts:nil];
+}
 
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];

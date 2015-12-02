@@ -1,16 +1,87 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6724" systemVersion="14A389" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3735"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8092"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider=""/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController">
+                    <items>
+                        <button width="1" alignment="left" title="push" id="ORW-wI-Rwk">
+                            <connections>
+                                <segue destination="IKW-ex-9fC" kind="push" id="AuR-Qu-9Fs"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="modal" id="Vmu-3e-q0M">
+                            <connections>
+                                <segue destination="Y3H-WM-6od" kind="modal" id="mm2-8e-pX0"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="代码跳转" id="GoS-z9-chJ">
+                            <connections>
+                                <action selector="push" destination="AgC-eL-Hgc" id="NXy-qe-dZV"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--demo-->
+        <scene sceneID="rYA-rF-l1l">
+            <objects>
+                <controller identifier="test3" title="demo" hidesWhenLoading="NO" id="g3l-zu-l9h"/>
+            </objects>
+            <point key="canvasLocation" x="173" y="96"/>
+        </scene>
+        <!--toModal-->
+        <scene sceneID="GTc-M4-wpx">
+            <objects>
+                <controller identifier="test2" title="toModal" hidesWhenLoading="NO" id="Y3H-WM-6od">
+                    <color key="backgroundColor" red="0.3411764706" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <segue destination="cJr-gb-4Yw" kind="relationship" relationship="nextPage" id="JfB-tC-Lsg"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="410" y="12"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="yWR-hG-3vc">
+            <objects>
+                <controller hidesWhenLoading="NO" id="cJr-gb-4Yw">
+                    <connections>
+                        <segue destination="cBZ-j6-txh" kind="relationship" relationship="nextPage" id="ptF-fa-gVC"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="641" y="-90"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="v0F-LK-08O">
+            <objects>
+                <controller hidesWhenLoading="NO" id="cBZ-j6-txh"/>
+            </objects>
+            <point key="canvasLocation" x="628" y="99"/>
+        </scene>
+        <!--topush-->
+        <scene sceneID="mPn-Jf-tqO">
+            <objects>
+                <controller identifier="test1" title="topush" hidesWhenLoading="NO" id="IKW-ex-9fC">
+                    <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="450" y="336"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="F05-Pq-jdq">
+            <objects>
+                <controller hidesWhenLoading="NO" id="CuU-xG-N2n"/>
+            </objects>
+            <point key="canvasLocation" x="614" y="333"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -31,7 +102,7 @@
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModuleProvider=""/>
+                <controller id="4sK-HA-Art" customClass="NotificationController"/>
             </objects>
             <point key="canvasLocation" x="468" y="643"/>
         </scene>
